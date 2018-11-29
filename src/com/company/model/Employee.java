@@ -17,7 +17,7 @@ public class Employee {
         this.id = idX;
         this.firstname = nameX;
         this.surname = surnameX;
-        if(isAdult(ageX)) {
+        if (isAdult(ageX)) {
             this.age = ageX;
         }
         this.jobPosition = jobPositionX;
@@ -27,8 +27,7 @@ public class Employee {
         if (checkAge >= 18) {
             //System.out.println(this.name + " " + this.surname + " can be employed");
             return true;
-        }
-        else {
+        } else {
             //System.out.println(this.name + " " + this.surname + " can't employed");
             return false;
         }
@@ -44,7 +43,6 @@ public class Employee {
     public void setFirstname(String name) {
         this.firstname = name;
     }
-
     public String getFirstname() {
         return firstname;
     }
@@ -52,7 +50,6 @@ public class Employee {
     public void setSurname(String surname) {
         this.surname = surname;
     }
-
     public String getSurname() {
         return surname;
     }
@@ -62,8 +59,7 @@ public class Employee {
         if (check) {
             this.age = newAge;
         }
-     }
-
+    }
     public Integer getAge() {
         return age;
     }
@@ -71,7 +67,6 @@ public class Employee {
     public void setJobPosition(String jobPosition) {
         this.jobPosition = jobPosition;
     }
-
     public String getJobPosition() {
         return jobPosition;
     }
@@ -79,14 +74,30 @@ public class Employee {
     public Integer getSalary() {
         return salary;
     }
-
     public void setSalary(Integer salary) {
         this.salary = salary;
     }
 
-    public void toPrintEmloyeeData() {
-        System.out.println((id) + " - " + (firstname) + " " + (surname) + ", job position is " + (jobPosition));
+    public String toPrintEmloyeeData() {
+        return (id) + " - " + (firstname) + " " + (surname) + ", job position is " + (jobPosition);
     }
+
 }
 
 
+
+/*    public Integer toGetNewSalary() {
+        if(getJobPosition() == "junior"){  //сравниваем содержимое объектов (equels)
+            salary = getSalary() + 300;
+        }
+        if(getJobPosition() == "middle"){
+            salary = getSalary() + 500;
+        }
+        if(getJobPosition() == "senior"){
+            salary = getSalary() + 1000;
+        }
+        return salary;
+    }
+}
+
+*/
